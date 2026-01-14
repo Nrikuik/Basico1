@@ -1,0 +1,157 @@
+Name: Pages
+Type: FolderType
+Children:
+- Name: Motors
+  Id: g=5f31c6f7b819d8bd6bce6d40e9584ad4
+  Supertype: Page
+  ReferenceType: HasComponent
+  Children:
+  - Name: HorizontalLayout1
+    Type: RowLayout
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MyMotorFaceplate1
+      Type: MyMotorFaceplate
+      Children:
+      - Name: Motor
+        Type: Alias
+        DataType: NodeId
+        Value: "/Objects/Basico1/Model/MyMotor1"
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Objects/Basico1/Model/Types/MyMotor"
+      - Name: CircularGauge1
+        Type: CircularGauge
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Motor}/Speed"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Float
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+        - Name: WarningZones
+          Type: BaseObjectType
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Motor}@BrowseName"
+    - Name: MyMotorFaceplate2
+      Type: MyMotorFaceplate
+      Children:
+      - Name: Motor
+        Type: Alias
+        DataType: NodeId
+        Value: "/Objects/Basico1/Model/MyMotor2"
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Objects/Basico1/Model/Types/MyMotor"
+      - Name: CircularGauge1
+        Type: CircularGauge
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Motor}/Speed"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Float
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 100.0
+        - Name: WarningZones
+          Type: BaseObjectType
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Motor}@BrowseName"
+- Name: Dashboard
+  Id: g=ebacc4ad88c4acbdeaa14fb14ce90a72
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: Alarms
+  Id: g=8eafeec9a858f98915bc1b708189fc70
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: Alarm_History
+  Id: g=77a70ca9bd35506361811d4071bbf1d7
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: Data_Grid
+  Id: g=97b5aa63e6066bda3ea259efc2d5d86e
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: RT_Trend
+  Id: g=dac5c50bd19b1f4bd6e0bcda987ea720
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: HT_Trend
+  Id: g=ec5ca8ea123784f8f46a3770af4e2792
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: Recipes
+  Id: g=f8bc049de53266b82365419e17b63a47
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: LanguajeSwitching
+  Id: g=8125d8549bfe5de3e7a5640823403aac
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: UserLogin
+  Id: g=bf91fd8b87ec98e42f95a00be14651d1
+  Supertype: Page
+  ReferenceType: HasComponent
+- Name: UserManagemet
+  Id: g=f41cf0942d0e05f1ba262c8422f7e7da
+  Supertype: Page
+  ReferenceType: HasComponent
