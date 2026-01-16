@@ -18,3 +18,9 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
     Value: 20
+- Name: Motor1Alarm
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Temperature
+  Type: BaseDataVariableType
+  DataType: Int32

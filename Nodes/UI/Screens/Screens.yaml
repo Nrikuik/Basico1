@@ -119,3 +119,4 @@ Children:
     DataType: Color
     ModellingRule: Optional
     Value: "#e4e4e4"
+- File: AlarmWidgets/AlarmWidgets.yaml
